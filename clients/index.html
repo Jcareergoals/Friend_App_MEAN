@@ -11,18 +11,44 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="./static/css/styles.css">
 		<!-- Angular & Angular-routes Library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
-		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="./static/css/styles.css">
-		<script>
-
-		</script>
+		<!-- Angular script -->
+		<script src="./static/angular.js"></script>
+		<meta http-equiv="refresh" content="1">
 	</head>
 	<body>
 		<div class="container">
-
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Friends:</h3>
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<form class="form form-horizontal">
+						<div class="form-group">
+							<label for='name' class='control-label col-xs-1'>Name:</label>
+							<div class="col-xs-4">
+								<input type='text' id='name' class='form-control'>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for='age' class='control-label col-xs-1'>Age:</label>
+							<div class="col-xs-2">
+								<input type='Number' id='age' class='form-control'>
+							</div>
+							<button type='submit' class='btn btn-default'>Add Friend</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div> <!-- End Container -->
 	</body> 
 </html>
