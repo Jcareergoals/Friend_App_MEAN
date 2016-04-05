@@ -15,7 +15,7 @@ friends_app.factory('friends_factory', function($http){
 	return factory; 
 }); 
 
-// controller
+// controllers
 friends_app.controller('friends_controller', function($scope, friends_factory){
 	$scope.friends = []; 
 	friends_factory.index(function(data){
@@ -28,3 +28,6 @@ friends_app.controller('friends_controller', function($scope, friends_factory){
 		}); 
 	}
 }); 
+
+
+// file location: /clients/static/angular.js

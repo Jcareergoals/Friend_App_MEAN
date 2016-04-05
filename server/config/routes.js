@@ -3,7 +3,6 @@ var friend = mongoose.model('friend');
 var friendsController = require('./../controllers/users.js');
 
 module.exports  = function(app){
-	// var users = [{name:"Josue", age:24},{name:"Lemy", age:23}]; 
 	app.get('/friends', function(req, res){
 		friend.find({}, function(err, data){
 			res.json(data); 
@@ -13,3 +12,5 @@ module.exports  = function(app){
 		friendsController.create(req, res); 
 	}); 
 }
+
+// file location: /server/config/routes.js
