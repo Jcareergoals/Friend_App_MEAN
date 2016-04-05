@@ -9,3 +9,12 @@ body {
 	background-color: white; 
 	margin: 25px auto; 
 }
+.friends_list {
+	height: 100px;
+	padding: 5px;  
+	overflow: auto; 
+	box-shadow: 0px 0px 5px grey inset; 
+	width: 140px; 
+	background-color: rgb(245,245,245); 
+}
+li {list-style-type: none;  }
