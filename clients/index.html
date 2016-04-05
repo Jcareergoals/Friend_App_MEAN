@@ -28,10 +28,14 @@
 					<ul class='friends_list'>
 						<li ng-repeat='x in friends | orderBy:"-age"|filter:filter_friend'>{{ x.name }}, {{ x.age }}</li>
 					</ul>
-					{{filter_friend}}
 					<div class="form-group col-xs-2">
-						<label for='filter'>Filter:</label>
+						<label for='filter' class='control-label'>Filter:</label> {{filter_friend}}
 						<input type='text' class='form-control' id='filter' ng-model='filter_friend'>
+					</div>
+					<div class="form-group col-xs-3">
+						<label for='remove' class='control-label'>Remove friend</label>
+						<input type='text' class='form-control' id='remove' ng-model='removeFriend.name'>
+						<button class='btn btn-default' ng-click='remove()'>Remove</button>
 					</div>
 				</div>
 			</div>

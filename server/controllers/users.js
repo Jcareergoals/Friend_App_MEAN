@@ -11,6 +11,13 @@ module.exports = {
 		newFriend.save(function(err, data){
 			res.json(data);
 		}); 
+	}, 
+	remove: function(req, res){
+		friend.remove({name: req.body.name}, function(err){
+			friend.find({}, function(err, data){
+				res.json(data);  
+			}); 
+		}); 
 	}
 }
 

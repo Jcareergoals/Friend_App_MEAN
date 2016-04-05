@@ -12,6 +12,11 @@ friends_app.factory('friends_factory', function($http){
 			callback(output);
 		});
 	}
+	factory.removeFriend = function(friend, callback){
+		$http.post('/remove', friend).success(function(output){
+			callback(output); 
+		}); 
+	}
 	return factory; 
 }); 
 
@@ -25,6 +30,12 @@ friends_app.controller('friends_controller', function($scope, friends_factory){
 		friends_factory.addFriend($scope.newFriend, function(data){
 			$scope.friends.push(data);
 			$scope.newFriend = {}; 
+		}); 
+	}
+	$scope.remove = function(){
+		friends_factory.removeFriend($scope.removeFriend, function(data){
+			$scope.removeFriend = {}; 
+			$scope.friends = data; 
 		}); 
 	}
 }); 
